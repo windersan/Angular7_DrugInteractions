@@ -1,0 +1,18 @@
+<div class="container well">
+<form [formGroup]="drugForm" (ngSubmit)="onSubmit()">
+  <div class="form-group col-md-4">
+      <label for="username">Drug 1</label>
+      <input id="username" formControlName="username" type="text" class="form-control" placeholder=""/>
+  </div>
+  <div class="form-group col-md-4">
+    <label for="password">Drug 2</label>
+    <input id="password" formControlName="password" type="text" class="form-control" placeholder=""/>
+  </div>
+    <button class="btn btn-info">FIND INTERACTIONS</button><br><br>
+</form>
+</div>
+
+<div class="panel panel-primary" 
+  *ngFor="let drug of drugList">
+    <h3>{{drug}}</h3>
+</div>
